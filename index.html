@@ -3,10 +3,99 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Gerador de Senhas</title>
     <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/style.css" />
   </head>
-  <body></body>
+  <body>
+    <main class="password-generator">
+      <div class="password-generator__container">
+        <div class="password-generator__heading">
+          <div class="password-generator__logo">
+            <svg
+              width="38"
+              height="38"
+              viewBox="0 0 38 38"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M30.2375 17.7308H8.65413C6.95126 17.7308 5.5708 19.1113 5.5708 20.8141V31.6058C5.5708 33.3087 6.95126 34.6891 8.65413 34.6891H30.2375C31.9403 34.6891 33.3208 33.3087 33.3208 31.6058V20.8141C33.3208 19.1113 31.9403 17.7308 30.2375 17.7308Z"
+                stroke="#FD58FF"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M11.7373 17.7308V11.5641C11.7354 9.65253 12.4438 7.80841 13.7251 6.38977C15.0064 4.97113 16.769 4.07918 18.671 3.88707C20.5729 3.69495 22.4783 4.21639 24.0174 5.35014C25.5565 6.4839 26.6194 8.14909 26.9998 10.0225V17.7308"
+                stroke="#FD58FF"
+                stroke-width="4"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+          </div>
+          <h1>Gerador de Senhas</h1>
+          <h2>Gere instantaneamente uma senha aleatória e segura</h2>
+        </div>
+        <div class="password-generator__password-display">
+          <span>senha</span>
+          <h4></h4>
+          <div>
+            <button class="password-generator__action-button">
+              Copiar senha
+            </button>
+            <button class="password-generator__action-button">
+              Gerar senha
+            </button>
+          </div>
+        </div>
+        <div class="password-generator__password-configuration">
+          <h3>Personalize sua senha</h3>
+          <div class="password-generator__options">
+            <div class="password-generator__option">
+              <h4 for="password-length">Número de caracteres</h4>
+              <input type="range" min="-10" max="10" />
+            </div>
+            <div class="password-generator__option">
+              <fieldset>
+                <legend>Características da senha</legend>
+                <input
+                  type="checkbox"
+                  id="uppercase-letters"
+                  class="password-generator__option-checkbox"
+                  value="Letras maiusculas"
+                />
+                <label for="uppercase-letters">Letras maiusculas</label>
+                <input
+                  type="checkbox"
+                  id="lowercase-letters"
+                  class="password-generator__option-checkbox"
+                  value="Letras minusculas"
+                />
+                <label for="lowercase-letters">Letras minusculas</label>
+                <input
+                  type="checkbox"
+                  id="numbers"
+                  class="password-generator__option-checkbox"
+                  value="Números"
+                />
+                <label for="numbers">Números</label>
+                <input
+                  type="checkbox"
+                  id="symbols"
+                  class="password-generator__option-checkbox"
+                  value="Símbolos"
+                />
+                <label for="symbols">Símbolos</label>
+              </fieldset>
+            </div>
+            <div class="password-generator__option"></div>
+          </div>
+        </div>
+        <button class="password-generator__button">Copiar senha</button>
+      </div>
+    </main>
+  </body>
   <script src="js/scripts.js"></script>
 </html>
