@@ -39,41 +39,119 @@
           <h2>Gere instantaneamente uma senha aleatória e segura</h2>
         </div>
         <div class="password-generator__password-display">
-          <span>senha</span>
-          <h4></h4>
-          <div>
+          <div class="password-generator__password-display-text">
+            <span>senha</span>
+            <h4>zcBLsNGX2616</h4>
+          </div>
+          <div class="password-generator__action-buttons">
             <button class="password-generator__action-button">
-              Copiar senha
+              <svg
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M27.1667 12.2725H15.1667C13.6939 12.2725 12.5 13.4664 12.5 14.9391V26.9391C12.5 28.4119 13.6939 29.6058 15.1667 29.6058H27.1667C28.6394 29.6058 29.8333 28.4119 29.8333 26.9391V14.9391C29.8333 13.4664 28.6394 12.2725 27.1667 12.2725Z"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M7.1665 20.2725H5.83317C5.12593 20.2725 4.44765 19.9915 3.94755 19.4914C3.44746 18.9913 3.1665 18.313 3.1665 17.6058V5.6058C3.1665 4.89856 3.44746 4.22028 3.94755 3.72018C4.44765 3.22008 5.12593 2.93913 5.83317 2.93913H17.8332C18.5404 2.93913 19.2187 3.22008 19.7188 3.72018C20.2189 4.22028 20.4998 4.89856 20.4998 5.6058V6.93913"
+                  stroke="white"
+                  stroke-width="3"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
             </button>
             <button class="password-generator__action-button">
-              Gerar senha
+              <svg
+                width="33"
+                height="33"
+                viewBox="0 0 33 33"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <g clip-path="url(#clip0_206_276)">
+                  <path
+                    d="M31.1665 5.60579V13.6058H23.1665"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M1.8335 26.9391V18.9391H9.8335"
+                    stroke="white"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                  <path
+                    d="M5.18016 12.2725C5.85639 10.3615 7.00567 8.653 8.52078 7.30636C10.0359 5.95971 11.8674 5.01882 13.8445 4.57148C15.8216 4.12413 17.8798 4.18492 19.8271 4.74816C21.7743 5.31141 23.5472 6.35875 24.9802 7.79247L30.1668 12.6058M2.8335 19.9391L8.02016 24.7525C9.45316 26.1862 11.226 27.2335 13.1732 27.7968C15.1205 28.36 17.1787 28.4208 19.1558 27.9735C21.1329 27.5261 22.9644 26.5852 24.4795 25.2386C25.9946 23.8919 27.1439 22.1834 27.8202 20.2725"
+                    stroke="white"
+                    stroke-width="3"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </g>
+                <defs>
+                  <clipPath id="clip0_206_276">
+                    <rect
+                      width="32"
+                      height="32"
+                      fill="white"
+                      transform="translate(0.5 0.272461)"
+                    />
+                  </clipPath>
+                </defs>
+              </svg>
             </button>
           </div>
         </div>
+        <div class="password-generator__divider"></div>
         <div class="password-generator__password-configuration">
           <h3>Personalize sua senha</h3>
           <div class="password-generator__options">
             <div class="password-generator__option">
               <h4 for="password-length">Número de caracteres</h4>
-              <input type="range" min="-10" max="10" />
+              <input
+                type="range"
+                min="0"
+                max="20"
+                value="0"
+                id="password-length"
+              />
+              <input
+                type="number"
+                class="password-generator__length-text"
+                value="0"
+              />
             </div>
             <div class="password-generator__option">
-              <fieldset>
-                <legend>Características da senha</legend>
+              <h4>Características da senha</h4>
+              <div class="password-generator__checkbox-wrapper">
                 <input
                   type="checkbox"
                   id="uppercase-letters"
-                  class="password-generator__option-checkbox"
                   value="Letras maiusculas"
                 />
-                <label for="uppercase-letters">Letras maiusculas</label>
+                <label for="uppercase-letters">Letras maiúsculas</label>
+              </div>
+              <div class="password-generator__checkbox-wrapper">
                 <input
                   type="checkbox"
                   id="lowercase-letters"
                   class="password-generator__option-checkbox"
                   value="Letras minusculas"
                 />
-                <label for="lowercase-letters">Letras minusculas</label>
+                <label for="lowercase-letters">Letras minúsculas</label>
+              </div>
+              <div class="password-generator__checkbox-wrapper">
                 <input
                   type="checkbox"
                   id="numbers"
@@ -81,6 +159,8 @@
                   value="Números"
                 />
                 <label for="numbers">Números</label>
+              </div>
+              <div class="password-generator__checkbox-wrapper">
                 <input
                   type="checkbox"
                   id="symbols"
@@ -88,12 +168,20 @@
                   value="Símbolos"
                 />
                 <label for="symbols">Símbolos</label>
-              </fieldset>
+              </div>
             </div>
-            <div class="password-generator__option"></div>
+            <div class="password-generator__option">
+              <h4>Força da senha</h4>
+              <div class="password-generator__strength"></div>
+              <div class="password-generator__strength-text">
+                <span>Fraca</span>
+                <span>Média</span>
+                <span>Forte</span>
+              </div>
+            </div>
           </div>
         </div>
-        <button class="password-generator__button">Copiar senha</button>
+        <button class="password-generator__copy-button">Copiar senha</button>
       </div>
     </main>
   </body>
