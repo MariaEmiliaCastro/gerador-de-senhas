@@ -35,24 +35,23 @@ const generateRandomNumberChar = () => {
 };
 
 const generateRandomSymbol = () => {
-  const symbols = "!@#$%^&*(){}[]=<>/,.|~?";
+  const symbols = "!@#$%^&*(){}[]=<>/,.|~?-";
   return symbols[generateRandomNumber(0, symbols.length - 1)];
 };
 
 const generateRandomPassword = (length, selectedParameters) => {
-  if (selectedParameters.length === 0) {
-    return;
-  }
+  const parameters =
+    selectedParameters.length === 0
+      ? [generateRandomLowerCaseLetter]
+      : selectedParameters;
 
   let password = "";
 
   for (let i = 0; i < length; i++) {
-    const randomFunctionIndex = generateRandomNumber(
-      0,
-      selectedParameters.length - 1
-    );
+    console.log("i", i);
+    const randomFunctionIndex = generateRandomNumber(0, parameters.length - 1);
 
-    password += selectedParameters[randomFunctionIndex]();
+    password += parameters[randomFunctionIndex]();
   }
 
   return password;
@@ -71,7 +70,7 @@ const setPasswordLength = (event) => {
   passwordLengthSelector.style.background = `linear-gradient(to right, #fff ${progress}%, #2c1746 ${progress}%)`;
 };
 
-const setPasswordStrength = (password) => {
+const setPasswordStrength = () => {
   passwordStrength.classList.remove(
     "password-generator__strength--weak",
     "password-generator__strength--medium",
