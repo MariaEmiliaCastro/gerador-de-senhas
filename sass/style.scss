@@ -1,0 +1,340 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+@media (max-width: 1024px) {
+  html,
+  body {
+    height: auto;
+    width: 100%;
+  }
+}
+
+.password-generator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #0f021b;
+  padding: 40px 0 40px 0;
+  height: 100%;
+  width: 100%;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 1089px;
+    width: 100%;
+  }
+
+  &__heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: #ffffff;
+    text-align: center;
+    margin-bottom: 56px;
+
+    h1 {
+      font-family: Roboto Mono;
+      font-size: 32px;
+      font-weight: 700;
+      line-height: 42.2px;
+    }
+
+    h2 {
+      font-size: 24px;
+      font-weight: 400;
+      line-height: 28.13px;
+    }
+  }
+
+  &__password-display {
+    background-color: #2c1746;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    width: 100%;
+    padding: 30px 40px 30px 40px;
+    border-radius: 2px;
+  }
+
+  &__divider {
+    margin-bottom: 32px;
+    height: 4px;
+    width: 100%;
+    background-color: #fd58ff;
+  }
+
+  &__password-display-text {
+    display: flex;
+    align-items: center;
+    gap: 34px;
+  }
+
+  &__password-display {
+    span {
+      font-size: 20px;
+      font-weight: 400;
+      line-height: 23.44px;
+      text-align: center;
+      color: #8a87aa;
+    }
+
+    h4 {
+      font-family: Roboto Mono;
+      font-size: 40px;
+      font-weight: 500;
+      line-height: 52.75px;
+      text-align: center;
+      color: #ffffff;
+    }
+  }
+
+  &__action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    justify-content: space-between;
+  }
+
+  &__action-buttons {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    justify-content: space-between;
+
+    svg {
+      cursor: pointer;
+    }
+  }
+
+  &__password-configuration {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 36px;
+    gap: 38px;
+    padding: 35px 40px 35px 76px;
+    background-color: #180828;
+    border: 1px solid #694a81;
+    width: 100%;
+
+    h3 {
+      font-family: Roboto Mono;
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 36.93px;
+      text-align: center;
+      align-self: start;
+      color: #d7d5eb;
+    }
+  }
+
+  &__options {
+    display: flex;
+    justify-content: space-between;
+    color: #8a87aa;
+
+    h4 {
+      font-family: Roboto;
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28.13px;
+      text-align: left;
+    }
+  }
+
+  &__option {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  &__checkbox-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+
+    label {
+      font-family: Roboto;
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 23.44px;
+      text-align: left;
+    }
+  }
+
+  &__strength {
+    width: 100%;
+    min-width: 300px;
+    background-color: #2c1746;
+    height: 32px;
+
+    &--weak {
+      background: linear-gradient(
+        90deg,
+        #e71b32 0%,
+        #e71b32 33.3%,
+        #2c1746 33.3%,
+        #2c1746 100%
+      );
+    }
+
+    &--medium {
+      background: linear-gradient(
+        90deg,
+        #faf408 0%,
+        #faf408 55%,
+        #2c1746 55%,
+        #2c1746 100%
+      );
+    }
+
+    &--strong {
+      background: #00ff85;
+    }
+  }
+
+  &__strength-text {
+    display: flex;
+    justify-content: space-between;
+    font-family: Roboto;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 23.44px;
+    text-align: left;
+    color: #8a87aa;
+  }
+
+  &__length-text {
+    border: 1px solid #694a81;
+    background-color: #2c1746;
+    padding: 12px;
+    font-family: Roboto;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 28.13px;
+    text-align: left;
+    color: #8a87aa;
+    max-width: 84px;
+  }
+
+  &__bottom-copy-button {
+    padding: 10px 12px 10px 12px;
+    gap: 10px;
+    border-radius: 2px;
+    opacity: 0px;
+    background-color: #fd58ff;
+    cursor: pointer;
+
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 25.78px;
+    text-align: left;
+    color: #0f021b;
+  }
+
+  @media (max-width: 1024px) {
+    &__options {
+      flex-direction: column;
+      gap: 32px;
+    }
+  }
+
+  @media (max-width: 576px) {
+    &__password-display {
+      flex-direction: column;
+    }
+
+    &__password-display-text {
+      flex-direction: column;
+      gap: 16px;
+
+      h4 {
+        font-size: 32px;
+      }
+    }
+
+    &__password-configuration {
+      padding: 35px 20px 35px 20px;
+    }
+
+    &__length-text {
+      max-width: 64px;
+    }
+  }
+}
+
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 300px;
+  cursor: pointer;
+  outline: none;
+  height: 10px;
+  background: #2c1746;
+  border-radius: 5px;
+  border-radius: 5px;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  background: #ffffff;
+  cursor: pointer;
+  border-radius: 50%;
+  border: none;
+}
+
+input[type="checkbox"] {
+  background-color: #2c1746;
+  border: 1px solid #694a81;
+  width: 24px;
+  height: 24px;
+  border-radius: 2px;
+  cursor: pointer;
+  position: relative;
+}
+
+input[type="checkbox"]:after {
+  content: " ";
+  width: 24px;
+  height: 24px;
+  border: none;
+  border-radius: 2px;
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  background: white url("../img/checkmark.svg") no-repeat center;
+  display: none;
+}
+
+input[type="checkbox"]:checked:after {
+  display: flex;
+}
