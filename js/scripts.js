@@ -48,7 +48,6 @@ const generateRandomPassword = (length, selectedParameters) => {
   let password = "";
 
   for (let i = 0; i < length; i++) {
-    console.log("i", i);
     const randomFunctionIndex = generateRandomNumber(0, parameters.length - 1);
 
     password += parameters[randomFunctionIndex]();
