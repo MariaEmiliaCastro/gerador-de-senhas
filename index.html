@@ -41,10 +41,13 @@
         <div class="password-generator__password-display">
           <div class="password-generator__password-display-text">
             <span>senha</span>
-            <h4>zcBLsNGX2616</h4>
+            <h4 id="password-output">zcBLsNGX2616</h4>
           </div>
           <div class="password-generator__action-buttons">
-            <button class="password-generator__action-button">
+            <button
+              aria-label="Copiar senha"
+              class="password-generator__action-button password-generator__copy-button"
+            >
               <svg
                 width="33"
                 height="33"
@@ -68,7 +71,11 @@
                 />
               </svg>
             </button>
-            <button class="password-generator__action-button">
+            <button
+              aria-label="Gerar nova senha"
+              id="refresh-password"
+              class="password-generator__action-button"
+            >
               <svg
                 width="33"
                 height="33"
@@ -123,13 +130,13 @@
                 type="range"
                 min="0"
                 max="20"
-                value="0"
+                value="10"
                 id="password-length"
               />
               <input
                 type="number"
                 class="password-generator__length-text"
-                value="0"
+                value="10"
               />
             </div>
             <div class="password-generator__option">
@@ -137,37 +144,38 @@
               <div class="password-generator__checkbox-wrapper">
                 <input
                   type="checkbox"
-                  id="uppercase-letters"
+                  id="RandomUpperCaseLetter"
                   value="Letras maiusculas"
+                  class="password-generator__option-checkbox"
                 />
-                <label for="uppercase-letters">Letras maiúsculas</label>
+                <label for="RandomUpperCaseLetter">Letras maiúsculas</label>
               </div>
               <div class="password-generator__checkbox-wrapper">
                 <input
                   type="checkbox"
-                  id="lowercase-letters"
+                  id="RandomLowerCaseLetter"
                   class="password-generator__option-checkbox"
                   value="Letras minusculas"
                 />
-                <label for="lowercase-letters">Letras minúsculas</label>
+                <label for="RandomLowerCaseLetter">Letras minúsculas</label>
               </div>
               <div class="password-generator__checkbox-wrapper">
                 <input
                   type="checkbox"
-                  id="numbers"
+                  id="RandomNumberChar"
                   class="password-generator__option-checkbox"
                   value="Números"
                 />
-                <label for="numbers">Números</label>
+                <label for="RandomNumberChar">Números</label>
               </div>
               <div class="password-generator__checkbox-wrapper">
                 <input
                   type="checkbox"
-                  id="symbols"
+                  id="RandomSymbol"
                   class="password-generator__option-checkbox"
                   value="Símbolos"
                 />
-                <label for="symbols">Símbolos</label>
+                <label for="RandomSymbol">Símbolos</label>
               </div>
             </div>
             <div class="password-generator__option">
@@ -181,7 +189,11 @@
             </div>
           </div>
         </div>
-        <button class="password-generator__copy-button">Copiar senha</button>
+        <button
+          class="password-generator__copy-button password-generator__bottom-copy-button"
+        >
+          Copiar senha
+        </button>
       </div>
     </main>
   </body>

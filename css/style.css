@@ -209,12 +209,13 @@
   max-width: 84px;
 }
 
-.password-generator__copy-button {
+.password-generator__bottom-copy-button {
   padding: 10px 12px 10px 12px;
   gap: 10px;
   border-radius: 2px;
   opacity: 0px;
   background-color: #fd58ff;
+  cursor: pointer;
 
   font-family: Roboto;
   font-size: 22px;
